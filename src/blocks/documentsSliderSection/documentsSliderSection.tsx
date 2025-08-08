@@ -3,12 +3,12 @@ import { useState } from 'react';
 import useSwipe from './slider';
 
 const images = [
-    '/Documents/document_1.jpg',
-    '/Documents/document_2.png',
-    '/Documents/document_3.png',
-    '/Documents/document_4.png',
-    '/Documents/document_5.png',
-    '/Documents/document_6.png',
+    './Documents/document_1.jpg',
+    './Documents/document_2.png',
+    './Documents/document_3.png',
+    './Documents/document_4.png',
+    './Documents/document_5.png',
+    './Documents/document_6.png',
 ];
 
 

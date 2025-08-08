@@ -10,7 +10,7 @@ export function PartnerSection() {
                     <li className="partner-section__item" key={i + 1}>
                         <img
                             className="partner-section__logo"
-                            src={`/Partners/partners${i + 1}.webp`}
+                            src={`./Partners/partners${i + 1}.webp`}
                             alt={`Partner ${i + 1}`}
                         />
                     </li>

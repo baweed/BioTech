@@ -4,7 +4,7 @@ function MainSection() {
         <>
             <div id='about' className="infoWrapper">
                 <div className="photoCompany">
-                    <img src='/photoCompany.jpg' alt='Логотип компании'
+                    <img src='./photoCompany.jpg' alt='Логотип компании'
                         height={'650px'} />
                 </div>
                 <div className="infoCompany">

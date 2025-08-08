@@ -36,22 +36,22 @@ const Header = () => {
             <header className="header-wrapper">
                 <div className="header-container">
                     <div className="logo left-logo">
-                        <img src='/Untitled.png' alt="Placeholder" width={'170px'} height={'170px'} />
+                        <img src='./Untitled.png' alt="Placeholder" width={'170px'} height={'170px'} />
                     </div>
 
                     <div className="content-block">
                         <div className="image-text-block">
-                            <img src='/headerMark.webp' alt="Placeholder" />
+                            <img src='./headerMark.webp' alt="Placeholder" />
                             <p>Ростовская область, Аксайский р-н, ЗАО "Агрофирма Аксайский" поле №1</p>
                         </div>
                         <div className="image-text-block">
-                            <img src='/headerMark_2.webp' alt="Placeholder" />
+                            <img src='./headerMark_2.webp' alt="Placeholder" />
                             <p>Ростовская область, г. Аксай, ул. Менделеева, д.53, оф. 24,25</p>
                         </div>
                     </div>
 
                     <div className="logo right-logo">
-                        <img src='/RostovMark.webp' alt="Placeholder" />
+                        <img src='./RostovMark.webp' alt="Placeholder" />
                     </div>
                 </div>
             </header>

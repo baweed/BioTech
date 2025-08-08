@@ -18,7 +18,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/background_promo.jpg'); /* Путь к вашему изображению */
+  background-image: url('./background_promo.jpg'); /* Путь к вашему изображению */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
