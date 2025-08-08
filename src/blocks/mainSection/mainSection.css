@@ -1,0 +1,154 @@
+/* Основные стили контейнера */
+.infoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+  background-color: white;
+}
+
+.infoCompany h1 {
+  color: #1a4b3c;
+}
+
+/* Колонки */
+.photoCompany {
+  flex: 0 0 calc(50% - 20px);
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.photoCompany img {
+  width: 500px;
+}
+
+.infoCompany {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCompany p {
+  font-size: 1.25rem;
+  color: black
+}
+
+/* Стили кнопки */
+.documentButton {
+  background-color: #1a7f5a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.documentDivMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.documentButton:hover {
+  background-color: #145c3e;
+}
+
+/* Эффекты кнопки */
+.documentButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.documentButton:focus {
+  animation: pulse 1.5s infinite;
+}
+
+.documentButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.documentButton:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .photoCompany {
+    display: none;
+    flex: 1 1 100%;
+  }
+
+  .infoCompany {
+    flex: 1 1 100%;
+  }
+
+  .documentButton {
+    font-size: 1.75rem;
+    padding: 24px 36px;
+    margin-top: 5%;
+  }
+
+  .infoWrapper {
+    gap: 20px;
+  }
+
+  .infoCompany p {
+    font-size: 1.25rem;
+    padding: 0 50px;
+    margin: 0 0 30px;
+  }
+
+  .infoCompany h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+}

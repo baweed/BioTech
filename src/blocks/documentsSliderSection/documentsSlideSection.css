@@ -1,0 +1,112 @@
+.documents-slider-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 32px 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.documents-slider-section .slider-image-wrapper {
+    width: 630px;
+    height: 770px;
+}
+.documents-slider-section h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a4b3c;
+}
+
+.documents-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slider-switch {
+    border: none;
+    border-radius: 20%;
+    width: 120px;
+    height: 60px;
+    background: #f0f0f0;
+    font-size: 1.5rem;
+
+}
+
+.slider-switch:hover {
+    background: #e0e0e0;
+}
+
+.slider-image-wrapper {
+    width: 320px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fafafa;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.slider-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.slider-pagination span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.slider-pagination span.active,
+.slider-pagination span:hover {
+    background: #0078d4;
+    color: #fff;
+}
+@media (max-width: 700px) {
+    .documents-slider-section {
+        padding: 10px 0;
+    }
+    .documents-slider-section .slider-image-wrapper,
+    .slider-image-wrapper {
+        width: 98vw;
+        max-width: 100vw;
+        height: 80vw;
+        max-height: 90vw;
+        min-width: 0;
+        min-height: 0;
+    }
+    .slider-switch {
+        display: none;
+    }
+    .documents-slider-section h2 {
+        font-size: 1.4rem;
+    }
+    .documents-slider {
+        gap: 0;
+    }
+    /* Для свайпа используйте библиотеку или добавьте обработчики touch в JS */
+}

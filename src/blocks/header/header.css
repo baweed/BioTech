@@ -1,0 +1,164 @@
+/* Основные стили хедера */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  min-height: 120px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.content-block {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  height: 100%;
+  max-width: 800px;
+}
+
+.image-text-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Стили меню */
+.header-menu {
+  background-color: #145c3e;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.menu-item.active {
+  background-color: #1a7f5a;
+  color: white;
+  font-weight: bold;
+}
+
+/* Бургер-меню */
+.burger-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-wrapper {
+    display: none;
+  }
+
+  .burger-icon {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #145c3e;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+
+  .menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .menu-item {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .menu-list {
+    top: 50px;
+  }
+
+  .menu-item {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+
+  .burger-icon {
+    padding: 8px;
+  }
+
+  .bar {
+    width: 20px;
+    height: 2px;
+  }
+}
